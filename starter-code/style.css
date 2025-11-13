@@ -736,7 +736,7 @@ button,
 		background-image: var(--bg-light-image);
 		background-position: center;
 		background-size: cover;
-		min-height: 130vh;
+		min-height: 120vh;
 	}
 	header,
 	main {
