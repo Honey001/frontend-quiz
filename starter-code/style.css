@@ -532,7 +532,7 @@ button,
 		background-repeat: no-repeat;
 		background-size: center;
 		background-position: cover;
-		min-height: 110vh;
+		min-height: 100vh;
 		margin: var(--space32) auto;
 	}
 	.menu-container {
