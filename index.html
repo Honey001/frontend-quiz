@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./starter-code/assets/images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Frontend quiz app</title>
+		<link
+			rel="stylesheet"
+			href="./starter-code/style.css" />
+		<script
+			src="./main.js"
+			defer></script>
+	</head>
+	<body>
+		<header class="header-container">
+				<section class="subject-title-container hidden">
+					<div class="header-img-container">
+						<img
+							src=""
+							alt="subject-icon" />
+					</div>
+					<p class="subject-text"></p>
+				</section>
+
+				<section class="dark-light-mode-container">
+					<div class="dark-light-mode">
+						<img
+							src="./starter-code/assets/images/icon-sun-light.svg"
+							alt="icon-sun-light"
+							class="hidden" />
+						<img
+							src="./starter-code/assets/images/icon-sun-dark.svg"
+							alt="icon-sun-dark" />
+						<label for="toggle">
+							<input
+								type="checkbox"
+								class="toggle-input"
+								name="toggle-input"
+								id="toggle" />
+							<div class="toggle-switch"></div>
+						</label>
+						<img
+							src="./starter-code/assets/images/icon-moon-light.svg"
+							alt="icon-moon-light"
+							class="hidden" />
+						<img
+							src="./starter-code/assets/images/icon-moon-dark.svg"
+							alt="icon-moon-dark" />
+					</div>
+				</section>
+		</header>
+
+		<main class="container">
+			<article class="menu-container hidden">
+				<!-- Quiz menu start -->
+				<section class="welcome-text-container">
+					<h1 class="welcome-title">
+						Welcome to the
+						<span class="bold-text">Frontend Quiz!</span>
+					</h1>
+					<div class="subject-info-container">
+						<p class="subject-info">
+							Pick a subject to get started.
+						</p>
+					</div>
+				</section>
+
+				<section class="button-display-container">
+					<button
+						class="btn"
+						id="htmlBtn">
+						<div
+							class="subject-icon-container"
+							data-item="accent-1">
+							<img
+								src="./starter-code/assets/images/icon-html.svg"
+								alt="icon-html" />
+						</div>
+						<p class="subject-title">HTML</p>
+					</button>
+
+					<button
+						class="btn"
+						id="cssBtn">
+						<div
+							class="subject-icon-container"
+							data-item="accent-2">
+							<img
+								src="./starter-code/assets/images/icon-css.svg"
+								alt="icon-css" />
+						</div>
+						<p class="subject-title">CSS</p>
+					</button>
+
+					<button
+						class="btn"
+						id="jsBtn">
+						<div
+							class="subject-icon-container"
+							data-item="accent-3">
+							<img
+								src="./starter-code/assets/images/icon-js.svg"
+								alt="icon-js" />
+						</div>
+						<p class="subject-title">JavaScript</p>
+					</button>
+
+					<button
+						class="btn"
+						id="accessibilityBtn">
+						<div
+							class="subject-icon-container"
+							data-item="accent-4">
+							<img
+								src="./starter-code/assets/images/icon-accessibility.svg"
+								alt="icon-accessibility" />
+						</div>
+						<p class="subject-title">Accessibility</p>
+					</button>
+				</section>
+			</article>
+			<!-- Quiz menu end -->
+
+			<article class="questions-container hidden">
+				<section class="question-container">
+					<!-- Quiz question start -->
+					<section class="question-text-container">
+						<div class="question-content-container">
+							<p class="no-of-question">
+								Question
+								<span
+									class="no-of-questions-answered"
+									id="noQuestionAnswered"></span>
+								of 10
+							</p>
+							<p class="question"></p>
+						</div>
+						<div class="progress-bar-container">
+							<div class="progressing-bar"></div>
+						</div>
+					</section>
+
+					<section class="question-options-container">
+						<button
+							class="btn option"
+							id="">
+							<div class="option-answer-container">
+								<div class="option-container">
+									<p class="option-text">A</p>
+								</div>
+								<p class="option-list">#header</p>
+							</div>
+							<div class="error-correct-img-container">
+								<img
+									src="./starter-code/assets/images/icon-correct.svg"
+									alt="icon-correct"
+									class="hidden" />
+								<img
+									src="./starter-code/assets/images/icon-error.svg"
+									alt="icon-error"
+									class="hidden"
+									class="hidden" />
+							</div>
+						</button>
+
+						<button
+							class="btn option"
+							id="">
+							<div class="option-answer-container">
+								<div class="option-container">
+									<p class="option-text">B</p>
+								</div>
+								<p class="option-list">#header</p>
+							</div>
+							<div class="error-correct-img-container">
+								<img
+									src="./starter-code/assets/images/icon-correct.svg"
+									alt="icon-correct"
+									class="hidden" />
+								<img
+									src="./starter-code/assets/images/icon-error.svg"
+									alt="icon-error"
+									class="hidden" />
+							</div>
+						</button>
+
+						<button
+							class="btn option"
+							id="">
+							<div class="option-answer-container">
+								<div class="option-container">
+									<p class="option-text">C</p>
+								</div>
+								<p class="option-list">#header</p>
+							</div>
+							<div class="error-correct-img-container">
+								<img
+									src="./starter-code/assets/images/icon-correct.svg"
+									alt="icon-correct"
+									class="hidden" />
+								<img
+									src="./starter-code/assets/images/icon-error.svg"
+									alt="icon-error"
+									class="hidden" />
+							</div>
+						</button>
+
+						<button
+							class="btn option"
+							id="">
+							<div class="option-answer-container">
+								<div class="option-container">
+									<p class="option-text">D</p>
+								</div>
+								<p class="option-list">#header</p>
+							</div>
+							<div class="error-correct-img-container">
+								<img
+									src="./starter-code/assets/images/icon-correct.svg"
+									alt="icon-correct"
+									class="hidden" />
+								<img
+									src="./starter-code/assets/images/icon-error.svg"
+									alt="icon-error"
+									class="hidden" />
+							</div>
+						</button>
+					</section>
+				</section>
+
+				<section class="submit-container">
+					<div class="submit-next-error-container">
+						<button
+							class="submit-next-btn"
+							id="submitBtn">
+							Submit answer
+						</button>
+						<div class="error-container hidden">
+							<img
+								src="./starter-code/assets/images/icon-error.svg"
+								alt="icon-error" />
+							<p class="error-text">Please select an answer</p>
+						</div>
+					</div>
+				</section>
+				<!-- number -->
+			</article>
+			<!-- Quiz question end -->
+			<article class="completed-main-quiz-container hidden">
+				<section class="completed-quiz-container">
+					<!-- Quiz completed start -->
+					<section class="complete-quiz-message-container">
+						<h1 class="complete-title">
+							Quiz completed
+							<span class="bold-text">You scored...</span>
+						</h1>
+					</section>
+					<!-- score -->
+					<section class="display-score-container">
+						<div class="subject-title-container hidden">
+							<div class="header-img-container">
+								<img
+									src=""
+									alt="subject-icon" />
+							</div>
+							<p class="subject-text">Accessibility</p>
+						</div>
+						<div class="score-container">
+							<p class="score-text">
+								<span class="actual-score">5</span> out of 10
+							</p>
+						</div>
+					</section>
+					<!-- Quiz completed end -->
+				</section>
+				<button
+					class="submit-next-btn play-again-btn"
+					id="playAgainBtn">
+					Play Again
+				</button>
+			</article>
+		</main>
+	</body>
+</html>
