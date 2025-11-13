@@ -626,7 +626,7 @@ button,
 		height: var(--space80);
 	}
 	.option {
-		transition: 0.2s all ease-in-out;
+		transition: 0.3s all ease-in-out;
 	}
 	.question {
 		font-size: var(--space32);
@@ -637,7 +637,7 @@ button,
 	.option-container {
 		width: var(--space40);
 		height: var(--space40);
-		transition: 0.2s all ease-in-out;
+		transition: 0.3s all ease-in-out;
 	}
 	.option-text {
 		font-size: var(--space16);
