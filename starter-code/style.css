@@ -516,6 +516,12 @@ img[alt="icon-correct"] {
 .hide {
 	display: none;
 }
+button,
+.btn,
+.submit-next-btn {
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+}
 
 /* || MEDIA QUERY */
 
