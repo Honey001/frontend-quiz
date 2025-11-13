@@ -526,7 +526,7 @@ img[alt="icon-correct"] {
 		background-repeat: no-repeat;
 		background-size: center;
 		background-position: cover;
-		min-height: 120vh;
+		min-height: 110vh;
 		margin: var(--space32) auto;
 	}
 	.menu-container {
