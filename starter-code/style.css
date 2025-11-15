@@ -250,6 +250,7 @@ label {
 	justify-content: space-between;
 	flex-flow: column nowrap;
 	gap: var(--space64);
+	width: 100%;
 }
 main {
 	margin-block-end: 8rem;
