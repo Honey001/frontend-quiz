@@ -27,7 +27,6 @@ const darkMode = document.querySelectorAll(
 const lightMode = document.querySelectorAll(
 	"img[alt='icon-sun-light'], img[alt='icon-moon-light']"
 );
-const toggleInput = document.getElementById("toggle");
 const toggleSwitch = document.querySelector(".toggle-switch");
 
 // DARK-MODE
@@ -96,14 +95,14 @@ const headerDisplay = (display) => {
 		con.style.backgroundColor = display.color;
 	});
 };
-const subject = (currentSubject) => {
+const subject = (inputSubject) => {
 	addHidden(menuCon);
 	removeHidden(questionCon);
 	score = 0;
 	scoreResult.textContent = score;
-	headerDisplay(currentSubject);
-	prepareQuiz(currentSubject);
-	displayQuestion(currentSubject);
+	headerDisplay(inputSubject);
+	prepareQuiz(inputSubject);
+	displayQuestion(inputSubject);
 };
 
 // Remove Hidden
@@ -141,10 +140,13 @@ const displayQuestion = (subject) => {
 	const question = subject.questions[currentIndex].question;
 	const options = subject.questions[currentIndex].options;
 	const progessBar = document.querySelector(".progressing-bar");
+	const questions = subject.questions;
 
 	questionText.textContent = question;
 	noOfQuestions.textContent = currentIndex + 1;
-	progessBar.style.width = `${((currentIndex + 1) / 10) * 100}%`;
+	progessBar.style.width = `${
+		((currentIndex + 1) / questions.length) * 100
+	}%`;
 	optionListText.forEach((optionElement, index) => {
 		optionElement.textContent = options[index];
 	});
@@ -251,52 +253,19 @@ submitBtn.addEventListener("click", () => {
 		submitBtn.textContent = "Submit Answer";
 	}
 	scoreResult.textContent = score;
-
-	playAgainBtn.addEventListener("click", () => {
-		addHidden(resultContainer);
-		removeHide(menuCon);
-		selectedAnswer = null;
-		currentIndex = 0;
-		currentSubject = null;
-		score = 0;
-		scoreResult.textContent = score;
-		subjectTitleCon.forEach((container) => {
-			container.style.visibility = "hidden";
-		});
-	});
-
-
-	// NOT INCLUDED
-	// Save progress to localStorage after each answer
-	const quizProgress = {
-		subject: currentSubject ? currentSubject.title : null,
-		currentIndex,
-		score,
-	};
-	localStorage.setItem("quizProgress", JSON.stringify(quizProgress));
 });
 
-// Restore progress from localStorage on load
-//
-/**window.addEventListener("DOMContentLoaded", async () => {
-	await loadQuizzess();
-	const savedProgress = JSON.parse(localStorage.getItem("quizProgress"));
-	if (savedProgress && quizData) {
-		const savedSubject = quizData.find(
-			(q) => q.title === savedProgress.subject
-		);
-		if (savedSubject) {
-			currentSubject = savedSubject;
-			currentIndex = savedProgress.currentIndex;
-			score = savedProgress.score;
-			addHidden(menuCon);
-			removeHidden(questionCon);
-			scoreResult.textContent = score;
-			headerDisplay(currentSubject);
-			prepareQuiz(currentSubject);
-			displayQuestion(currentSubject);
-		}
-	}
-});**/
+playAgainBtn.addEventListener("click", () => {
+	addHidden(resultContainer);
+	removeHide(menuCon);
+	selectedAnswer = null;
+	currentIndex = 0;
+	currentSubject = null;
+	score = 0;
+	scoreResult.textContent = score;
+	subjectTitleCon.forEach((container) => {
+		container.style.visibility = "hidden";
+	});
+});
 
 loadQuizzess();

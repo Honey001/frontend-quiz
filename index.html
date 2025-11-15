@@ -22,16 +22,16 @@
 	</head>
 	<body>
 		<header class="header-container">
-			<section class="subject-title-container hidden">
+			<div class="subject-title-container hidden">
 				<div class="header-img-container">
 					<img
 						src=""
 						alt="subject-icon" />
 				</div>
 				<p class="subject-text"></p>
-			</section>
+			</div>
 
-			<section class="dark-light-mode-container">
+			<div class="dark-light-mode-container">
 				<div class="dark-light-mode">
 					<img
 						src="./starter-code/assets/images/icon-sun-light.svg"
@@ -40,7 +40,7 @@
 					<img
 						src="./starter-code/assets/images/icon-sun-dark.svg"
 						alt="icon-sun-dark" />
-					<label for="toggle">
+					<label>
 						<input
 							type="checkbox"
 							class="toggle-input"
@@ -57,11 +57,11 @@
 						src="./starter-code/assets/images/icon-moon-dark.svg"
 						alt="icon-moon-dark" />
 				</div>
-			</section>
+			</div>
 		</header>
 
 		<main class="container">
-			<article class="menu-container hidden">
+			<section class="menu-container hidden">
 				<!-- Quiz menu start -->
 				<section class="welcome-text-container">
 					<h1 class="welcome-title">
@@ -78,7 +78,7 @@
 				<section class="button-display-container">
 					<button
 						class="btn"
-						id="htmlBtn">
+						id="htmlBtn" type="button">
 						<div
 							class="subject-icon-container"
 							data-item="accent-1">
@@ -91,7 +91,7 @@
 
 					<button
 						class="btn"
-						id="cssBtn">
+						id="cssBtn" type="button">
 						<div
 							class="subject-icon-container"
 							data-item="accent-2">
@@ -104,7 +104,7 @@
 
 					<button
 						class="btn"
-						id="jsBtn">
+						id="jsBtn" type="button">
 						<div
 							class="subject-icon-container"
 							data-item="accent-3">
@@ -117,7 +117,7 @@
 
 					<button
 						class="btn"
-						id="accessibilityBtn">
+						id="accessibilityBtn" type="button">
 						<div
 							class="subject-icon-container"
 							data-item="accent-4">
@@ -128,10 +128,10 @@
 						<p class="subject-title">Accessibility</p>
 					</button>
 				</section>
-			</article>
+			</section>
 			<!-- Quiz menu end -->
 
-			<article class="questions-container hidden">
+			<section class="questions-container hidden">
 				<section class="question-container">
 					<!-- Quiz question start -->
 					<section class="question-text-container">
@@ -153,7 +153,7 @@
 					<section class="question-options-container">
 						<button
 							class="btn option"
-							id="option-A">
+							id="option-A" type="button">
 							<div class="option-answer-container">
 								<div class="option-container">
 									<p class="option-text">A</p>
@@ -175,7 +175,7 @@
 
 						<button
 							class="btn option"
-							id="option-B">
+							id="option-B" type="button">
 							<div class="option-answer-container">
 								<div class="option-container">
 									<p class="option-text">B</p>
@@ -196,7 +196,7 @@
 
 						<button
 							class="btn option"
-							id="option-C">
+							id="option-C" type="button">
 							<div class="option-answer-container">
 								<div class="option-container">
 									<p class="option-text">C</p>
@@ -217,7 +217,7 @@
 
 						<button
 							class="btn option"
-							id="option-D">
+							id="option-D" type="button">
 							<div class="option-answer-container">
 								<div class="option-container">
 									<p class="option-text">D</p>
@@ -242,7 +242,7 @@
 					<div class="submit-next-error-container">
 						<button
 							class="submit-next-btn"
-							id="submitBtn">
+							id="submitBtn" type="submit">
 							Submit answer
 						</button>
 						<div class="error-container hidden">
@@ -254,9 +254,9 @@
 					</div>
 				</section>
 				<!-- number -->
-			</article>
+			</section>
 			<!-- Quiz question end -->
-			<article class="completed-main-quiz-container hidden">
+			<section class="completed-main-quiz-container hidden">
 				<section class="completed-quiz-container">
 					<!-- Quiz completed start -->
 					<section class="complete-quiz-message-container">
@@ -285,10 +285,10 @@
 				</section>
 				<button
 					class="submit-next-btn play-again-btn"
-					id="playAgainBtn">
+					id="playAgainBtn" type="submit">
 					Play Again
 				</button>
-			</article>
+			</section>
 		</main>
 	</body>
 </html>
